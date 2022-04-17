@@ -21,21 +21,18 @@ document.querySelector('.button').addEventListener('click', function () {
   // большое число
   if (input > 9999) {
     document.querySelector('.input').value = null;
-    document.querySelector('body').style.background =
-      'url(https://ltdfoto.ru/images/2022/04/17/IMG_0469.jpg)';
+    document.querySelector('body').style.background = 'url(mnogo.jpg)';
     document.querySelector('body').style.backgroundSize = 'cover';
   }
   // маленькое число
   else if (input < 1) {
     document.querySelector('.input').value = null;
-    document.querySelector('body').style.background =
-      'url(https://ltdfoto.ru/images/2022/04/17/IMG_0468.jpg)';
+    document.querySelector('body').style.background = 'url(malo.jpg)';
     document.querySelector('body').style.backgroundSize = 'cover';
   }
   // // положительн7ый результат
   else {
-    document.querySelector('body').style.background =
-      'url(https://ltdfoto.ru/images/2022/04/17/photo_2022-04-17_23-03-03.jpg)';
+    document.querySelector('body').style.background = 'url(vsamiy.jpg)';
     document.querySelector('body').style.backgroundSize = 'cover';
     document.querySelector('.input').value = alert(
       Math.round(document.querySelector('.input').value / 100)
