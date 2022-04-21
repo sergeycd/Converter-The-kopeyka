@@ -22,37 +22,43 @@
 //   });
 // });
 
+const fon = function (fon) {
+  document.querySelector('body').style.background = fon;
+};
+const size = function (size) {
+  document.querySelector('body').style.backgroundSize = size;
+};
 // расчет введеного значения
 
 document.querySelector('.button').addEventListener('click', function () {
   let input = Number(document.querySelector('.input').value);
   console.log(input, typeof input);
+
   // большое число
   if (input > 9999) {
-    document.querySelector('.input').value = null;
-    document.querySelector('body').style.background = 'url(mnogo.jpg)';
-    document.querySelector('body').style.backgroundSize = 'cover';
+    fon('url(mnogo.jpg)');
+    size('cover');
   }
   // маленькое число
   else if (input < 1) {
-    document.querySelector('.input').value = null;
-    document.querySelector('body').style.background = 'url(malo.jpg)';
-    document.querySelector('body').style.backgroundSize = 'cover';
+    fon('url(malo.jpg)');
+    size('cover');
   }
   // 666
   else if (input == 666) {
-    document.querySelector('.input').value = null;
-    document.querySelector('body').style.background = 'url(dusha.jpg)';
-    document.querySelector('body').style.backgroundSize = 'cover';
+    fon('url(dusha.jpg)');
+    size('cover');
     document.querySelector('.button').textContent = 'продать душу за копейки';
   }
   // // положительн7ый результат
   else {
-    document.querySelector('body').style.background = 'url(vsamiy.jpg)';
-    document.querySelector('body').style.backgroundSize = 'cover';
+    fon('url(vsamiy.jpg)');
+    size('cover');
     document.querySelector('.input').value = alert(
       Math.round(document.querySelector('.input').value / 100)
     );
+
     document.querySelector('.button').textContent = 'проверь их';
   }
+  document.querySelector('.input').value = null;
 });
