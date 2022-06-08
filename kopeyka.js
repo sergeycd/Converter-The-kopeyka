@@ -55,7 +55,7 @@ document.querySelector('.button').addEventListener('click', function () {
     fon('url(vsamiy.jpg)');
     size('cover');
     document.querySelector('.input').value = alert(
-      Math.round(document.querySelector('.input').value / 100)
+      Math.floor(document.querySelector('.input').value / 100)
     );
 
     document.querySelector('.button').textContent = 'проверь их';
